@@ -1,0 +1,18 @@
+<div class="col-md-6 offset-md-3">
+  <br><br><br><br>
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">
+        Registrarse
+      </h3>
+    </div>
+    <div class="card-body">
+      <%= simple_form_for @user do |f|%>
+        <%= f.input :username %>
+        <%= f.input :email %>
+        <%= f.input :password %>
+        <%= f.submit "Registrarse" %>
+      <% end %>
+    </div>
+  </div>
+</div>

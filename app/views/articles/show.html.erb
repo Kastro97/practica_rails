@@ -1,0 +1,15 @@
+<% if notice %>
+  <div class="alert alert-success"><%= notice %></div>
+  <hr>
+<% end %>
+  <div class="col-md-4">
+    <br><br><br><br>
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title"><%= @article.title %></h3>
+      </div>
+      <div class="card-body">
+        <p class="card-text"><%= @article.description %></p>
+      </div>
+    </div>
+  </div>

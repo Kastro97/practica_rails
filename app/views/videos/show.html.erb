@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<div class="col-md-8 offset-md-2">
+  <br><br><br><br><br><br>
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-title"><%= @video.title %></h5>
+    </div>
+    <div class="card-body">
+      <video id='my-video' class='video-js card-img figure-img' controls preload='auto' width='640' height='264'
+             poster='<%= url_for(@video.image) %>' data-setup='{}'>
+        <source src='<%= url_for(@video.clip) %>' type='video/mp4'>
+        <p class='vjs-no-js'>
+          To view this video please enable JavaScript, and consider upgrading to a web browser that
+          <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+        </p>
+      </video>
+      <br>
+      <p class="card-text"><%= @video.body %></p>
+    </div>
+  </div>
+</div>
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>
